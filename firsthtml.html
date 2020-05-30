@@ -3,57 +3,74 @@
 <head>
   <title>Survey Form</title>
   <style>
-    form{
-      margin: 100px;
-      padding: 20px;
-      text-align: center;
+    div.container{
+      width: 100%;
+      border-radius: 3px;
+      border: 2px solid grey;
+      box-sizing: border-box;
     }
-    .question{
-      padding: 10px;
-      border: 5px solid aqua;
-    }
-    .input{
-      padding: 10px;
-      border: 5px solid pink;
+    div.question{
+      width: 23%;
+      float: left;
+      padding: 3px;
+      text-align:right;
+      }
+    div.input{
+      width: 75%;
+      float: right;
+      padding: 2px;
+      text-align:left;
+      }
+    div.button{
+      display: flex;
+      width: 800px;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
   <form>
-    <p style="color:red">Survey Form</p>
-    <label class="question" for="name">Name:</label>
-    <input class="input" type="text" id="name" name="User Name" placeholder="Enter your name"><br>
-    <label class="question" for="email"> Email: </label>
-    <input class="input" type="text" id="email" name="email" placeholder="Enter your email"><br>
-    <label class="question" for="age"> Age: </label>
-    <input class="input" type="number" id="age" name="age" placeholder="Age" min="10" max="100"><br>
-    <label class="question" for="role"> Which option best design your current role? </label>
-    <select class="input" name="role">
+    <div class="container">
+    <h1 style="color:red;text-align:center;">Survey Form</h1>
+    <div class="question"><label for="name" name="question">Name:</label></div>
+    <div class="input"><input type="text" id="name" name="User Name" placeholder="Enter your name"></div>
+    <div class="question"><label for="email" name="question">Email:</label></div>
+    <div class="input"><input type="text" id="email" name="email" placeholder="Enter your email"></div>
+    <div class="question"><label for="age" name="question">Age:</label></div>
+    <div class="input"><input type="number" id="age" name="age" placeholder="Age" min="10" max="100"></div>
+    <div class="question"><label for="role" name="question">Which option best design your current role?</label></div>
+    <div class="input"><div class="select">
+    <select name="role">
       <option value="Student">Student</option>
       <option value="Engineer">Engineer</option>
       <option value="Teacher">Teacher</option>
       <option value="Doctor">Doctor</option>
       <option value="none">None</option>
-    </select><br>
-    <label class="question" for="like"> Are you passionate about your job? </label><br>
-    <input class="input" type="radio" name="like" value="Absolutely">
-    <label for="Absolutely">Absolutely</label> <br>
-    <input class="input" type="radio" name="like" value="Maybe">
-    <label for="Maybe">Maybe</label> <br>
-    <input class="input" type="radio" name="like" value="No">
-    <label for="No">No</label>
-    <br>
-    <label class="question" for="interest"> What are your interests? </label><br>
-    <input class="input" type="checkbox" name="Music" value="Music">
-    <label for="Music">Music</label><br>
-    <input class="input" type="checkbox" name="Sports" value="Sports">
-    <label for="Sports">Sports</label><br>
-    <input class="input" type="checkbox" name="Books" value="Books">
-    <label for="Books">Books</label><br>
-    <input class="input" type="checkbox" name="Travel" value="Travel">
-    <label for="Travel">Travel</label><br>
-    <button type="button" name="Submit">Submit</button>
+    </select>
+    </div>
+  </div>
+    <div class="question"><label for="like" name="question"> Are you passionate about your job? </label></div>
+    <div class="input">
+    <input type="radio" name="like" value="Absolutely">
+    <label>Absolutely</label>
+    <input type="radio" name="like" value="Maybe">
+    <label>Maybe</label>
+    <input type="radio" name="like" value="No">
+    <label>No</label>
+    </div>
+    <div class="question"><label for="interest" name="question"> What are your interests? </label></div>
+    <div class="input">
+    <input type="checkbox" name="Music" value="Music">
+    <label for="Music">Music</label>
+    <input type="checkbox" name="Sports" value="Sports">
+    <label for="Sports">Sports</label>
+    <input type="checkbox" name="Books" value="Books">
+    <label for="Books">Books</label>
+    <input type="checkbox" name="Travel" value="Travel">
+    <label for="Travel">Travel</label>
+    </div>
+    <div class="button"><button type="button" name="Submit">Submit</button></div>
+    </div>
   </form>
-
 </body>
 </html>
