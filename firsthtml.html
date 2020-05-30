@@ -1,9 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Survey Form</title>
+  <style>
+    form{
+      margin: 100px;
+      padding: 20px;
+      text-align: center;
+    }
+    .question{
+      padding: 10px;
+      border: 5px solid aqua;
+    }
+    .input{
+      padding: 10px;
+      border: 5px solid pink;
+    }
+  </style>
 </head>
-<body style ="background-color: pink">
-  <p style="color:red">Test page</p>
+<body>
+  <form>
+    <p style="color:red">Survey Form</p>
+    <label class="question" for="name">Name:</label>
+    <input class="input" type="text" id="name" name="User Name" placeholder="Enter your name"><br>
+    <label class="question" for="email"> Email: </label>
+    <input class="input" type="text" id="email" name="email" placeholder="Enter your email"><br>
+    <label class="question" for="age"> Age: </label>
+    <input class="input" type="number" id="age" name="age" placeholder="Age" min="10" max="100"><br>
+    <label class="question" for="role"> Which option best design your current role? </label>
+    <select class="input" name="role">
+      <option value="Student">Student</option>
+      <option value="Engineer">Engineer</option>
+      <option value="Teacher">Teacher</option>
+      <option value="Doctor">Doctor</option>
+      <option value="none">None</option>
+    </select><br>
+    <label class="question" for="like"> Are you passionate about your job? </label><br>
+    <input class="input" type="radio" name="like" value="Absolutely">
+    <label for="Absolutely">Absolutely</label> <br>
+    <input class="input" type="radio" name="like" value="Maybe">
+    <label for="Maybe">Maybe</label> <br>
+    <input class="input" type="radio" name="like" value="No">
+    <label for="No">No</label>
+    <br>
+    <label class="question" for="interest"> What are your interests? </label><br>
+    <input class="input" type="checkbox" name="Music" value="Music">
+    <label for="Music">Music</label><br>
+    <input class="input" type="checkbox" name="Sports" value="Sports">
+    <label for="Sports">Sports</label><br>
+    <input class="input" type="checkbox" name="Books" value="Books">
+    <label for="Books">Books</label><br>
+    <input class="input" type="checkbox" name="Travel" value="Travel">
+    <label for="Travel">Travel</label><br>
+    <button type="button" name="Submit">Submit</button>
+  </form>
+
 </body>
 </html>
